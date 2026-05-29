@@ -15,6 +15,7 @@ import adrien.devmobile.videoandroid.ui.theme.VideoandroidTheme
 import android.content.Intent
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.VideoView
 import kotlin.math.pow
 
@@ -25,6 +26,9 @@ class SegundaActivity : ComponentActivity() {
 
         val btnReturn = findViewById<ImageButton>(R.id.btnVoltarSuperior)
         val btnReturnInferior = findViewById<Button>(R.id.btnVoltarInferior)
+
+        val ivImg = findViewById<ImageView>(R.id.imgPerfilSobre)
+        ivImg.setImageResource(R.drawable.foto_sobre)
 
         btnReturn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -38,5 +42,4 @@ class SegundaActivity : ComponentActivity() {
             startActivity(intent)
         }
     }
-
 }
